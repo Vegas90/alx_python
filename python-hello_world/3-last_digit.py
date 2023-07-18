@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 word_first_3= number % 100
-last_num = number %10
+last_num = abs(number) %10
 # YOUR CODE HERE
 
 if last_num > 5:
