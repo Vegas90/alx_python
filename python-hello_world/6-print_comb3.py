@@ -1,4 +1,4 @@
-for i in range(0,10):
-    for j in range(i + 0, 10):
-        print("{}, ".format(i) + "{}".format(j), end="")
-print()
+for i in range(0, 10):
+    for j in range(0, 10):
+         if i != j:
+            print("{}, ".format(i) + "{}".format(j), end="") 
