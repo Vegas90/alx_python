@@ -11,5 +11,3 @@ def fibonacci_sequence(n):
     return fib_nums
 
 #In this function, we start with the first two Fibonacci numbers (0 and 1) in the list fib_nums. We then use a while loop to continue generating Fibonacci numbers and appending them to the list until the list contains n elements.
-
-#print(fibonacci_sequence(2))
