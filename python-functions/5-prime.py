@@ -11,7 +11,5 @@ def is_prime(n):
              return vegas
 # If the number is less than 1, its also not a prime number.
     else:
-	     return amos
-  
-print(is_prime(0))     
+	     return amos   
      
