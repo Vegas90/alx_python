@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-def add(a,b):
-    return a+b
-
+# importing the function add from add_0.py
+from add_0 import add
+# defining variables a and b
 a = 1
 b = 2
-
-print("{} + {}".format(a,b))
+# calling the function add and printing the result
+print("{} + {} = {}".format(a, b, add(a, b)))
 
