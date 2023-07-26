@@ -3,8 +3,8 @@ import sys
 def main():
   num_args=len(sys.argv) -1
   
-  if num_args==1:
-    print( num_args,"argument.")
+  if num_args==0:
+    print( num_args,"argument:")
 
   else:
     print("{} arguments:".format(num_args))
