@@ -1,3 +1,3 @@
 def raise_exception():
-    raise NameError(message="This is a type exception.")
+    raise NameError("C is fun")
 print("C is fun")
