@@ -1,21 +1,21 @@
 import sys
 
-num_args=0
 def main():
   num_args=len(sys.argv)
   
-if num_args== 1:
-  print( num_args,"argument.")
+  if num_args==1:
+    print( num_args,"argument.")
 
-else:
- print("{} arguments:".format(num_args))
+  else:
+    print("{} arguments:".format(num_args))
   
-  #Print the arguments 
-for i in range(1, num_args + 1):
-  print(i, ":", sys.argv[i - 1])
+   # Print the arguments
+        for i in range(1, num_args):
+            print(i, ":", sys.argv[i])
 
 
 
 if __name__ == "__main__":
   main()
+
 
