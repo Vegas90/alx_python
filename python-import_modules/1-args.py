@@ -1,7 +1,7 @@
 import sys
 
 def main():
-  num_args=len(sys.argv)
+  num_args=len(sys.argv) -1
   
   if num_args==1:
     print( num_args,"argument.")
@@ -17,5 +17,4 @@ def main():
 
 if __name__ == "__main__":
   main()
-
 
