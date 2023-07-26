@@ -6,7 +6,7 @@ if num_args== 1:
   print( num_args,"argument.")
 
 else:
- print("{} arguments:"format(num_args))
+ print("{} arguments:".format(num_args))
   
   #Print the arguments 
 for i in range(1, num_args + 1):
