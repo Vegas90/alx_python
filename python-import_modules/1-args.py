@@ -1,4 +1,6 @@
 #import sys
+
+num_args=0
 def main():
   num_args=len(sys.argv)
   
