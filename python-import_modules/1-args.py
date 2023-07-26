@@ -1,4 +1,4 @@
-#import sys
+import sys
 
 num_args=0
 def main():
