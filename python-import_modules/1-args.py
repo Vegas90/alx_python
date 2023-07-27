@@ -11,7 +11,7 @@ def main():
   else:
       print("{} arguments:".format(num_args))
     
-    break
+    
   # Print the arguments
       for i in range(0, num_args):
          print(i+1, ":", sys.argv[i+1])
