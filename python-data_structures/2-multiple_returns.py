@@ -9,5 +9,4 @@ def multiple_returns(sentence):
     
     print("Length: {:d} - First character: {}".format(len(sentence), sentence[0]))
     
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
