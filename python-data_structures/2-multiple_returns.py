@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#multiple_returns = __import__('2-multiple_returns').multiple_returns
+multiple_returns = __import__('2-multiple_returns').multiple_returns
 
 def multiple_returns(sentence):
 #words = sentence.split()
@@ -8,3 +8,6 @@ def multiple_returns(sentence):
     
     
     print("Length: {:d} - First character: {}".format(len(sentence), sentence[0]))
+    
+if __name__ == "__main__":
+    main()
