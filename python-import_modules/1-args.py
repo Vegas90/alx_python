@@ -9,7 +9,7 @@ def main():
     print("{} arguments:".format(num_args))
    # Print the arguments
     for i in range(0, num_args):
-      print(i, ":", sys.argv[i+1])
+      print(i+1, ":", sys.argv[i+1])
 
 
 
