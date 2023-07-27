@@ -5,5 +5,5 @@ b=[4,5,6]
 c=[7,8,9]
 
 print("{}".format(a), end='\n')
-print("{}".format(b), end='\n')
-print("{}".format(c), end='\n')
+#print("{}".format(b), end='\n')
+#print("{}".format(c), end='\n')
