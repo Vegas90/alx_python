@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-multiple_returns = __import__('2-multiple_returns').multiple_returns
+#multiple_returns = __import__('2-multiple_returns').multiple_returns
 
 def multiple_returns(sentence):
 #words = sentence.split()
