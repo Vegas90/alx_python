@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-no_c = __import__('0-no_c').no_c
+#no_c = __import__('0-no_c').no_c
 
 result = ""
 def no_c(my_string):
@@ -11,8 +11,8 @@ def no_c(my_string):
     return result    
        
     #no_c(my_string)
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+   # main()
 
 
 
