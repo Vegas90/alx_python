@@ -11,5 +11,3 @@ print_matrix_integer(matrix)
 #print("{a}".format(a=a), end='\n')
 #print("{}".format(b), end='\n')
 #print("{}".format(c), end='\n')
-if __name__ == "__main__":
-  main()
