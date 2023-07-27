@@ -2,10 +2,10 @@ import sys
 center_args=0
 def main():
   num_args=len(sys.argv)-1
-  if len(sys.argv) ==0:
+  if num_args  ==0:
     print( num_args,"arguments.")
     
-  elif len(sys.argv) ==1:
+  elif num_args ==1:
     print( num_args,"argument:")
   
   else:
