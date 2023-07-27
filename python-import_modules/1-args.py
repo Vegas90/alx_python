@@ -2,7 +2,7 @@ import sys
 center_args=0
 def main():
   num_args=len(sys.argv)-1
-  if len(sys.argv) < 2:
+  if num_args < 2:
     print( num_args,"argument:")
   
   else:
