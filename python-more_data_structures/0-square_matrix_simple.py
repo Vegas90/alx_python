@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-#square_matrix_simple = __import__('0-square_matrix_simple').square_matrix_simple
-
 def square_matrix_sample(matrix=[]):
 #new_matrix=0   
  # Create a new matrix using list comprehension
