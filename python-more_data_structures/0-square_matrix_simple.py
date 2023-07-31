@@ -7,5 +7,4 @@ def square_matrix_sample(matrix=[]):
 #new_matrix=print(list(map(lambda x:[i**2 for i in x], matrix)))
     return new_matrix
 
-#if __name__ == "__main__":
-  #main()
+
