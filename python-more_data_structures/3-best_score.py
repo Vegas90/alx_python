@@ -1,9 +1,9 @@
 def best_score(a_dictionary):
     best_key= None
-    largest_value= int
+    best_value= float('-inf')
     for key, value in a_dictionary.items():
-      if value > largest_value:
+      if value > best_value:
            best_key = key
-           largest_value = value
+           best_value = value
              
     print(best_key)
