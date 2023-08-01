@@ -1,9 +1,9 @@
 def best_score(a_dictionary):
-    largest_key= None
-    best_value = int
+    best_key= None
+    best_score = int
     for key, value in a_dictionary.item:
-      if isinstance(value, int) and value > best_value:
-            largest_key = key
-            best_value = value
+      if isinstance(value, int) and value > best_score:
+           best_key = key
+           best_score = value
              
-            print(largest_key)
+    print(best_key)
