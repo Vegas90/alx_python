@@ -6,4 +6,4 @@ def best_score(a_dictionary):
            best_key = key
            best_value = value
              
-    print(best_key)
+    return best_key
