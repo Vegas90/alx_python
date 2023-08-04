@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-Square = __import__('0-square').Square
 """Example Google style docstrings.
 
 This module demonstrates documentation as specified by the `Google Python
