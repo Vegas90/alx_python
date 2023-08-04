@@ -6,6 +6,7 @@ with a section header and a colon followed by a block of indented text.
 
 """
 class Square:
+    pass
     """
 Example Google style docstrings.
 
@@ -14,7 +15,7 @@ Style Guide`_. Docstrings may extend over multiple lines. Sections are created
 with a section header and a colon followed by a block of indented text.
 
 """
-def __init__(self):
+def __init__(self,size):
         self.__size = size
         
     
