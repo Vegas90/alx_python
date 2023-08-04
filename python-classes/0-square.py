@@ -14,7 +14,7 @@ Style Guide`_. Docstrings may extend over multiple lines. Sections are created
 with a section header and a colon followed by a block of indented text.
 
 """
-def __init__(self,size):
+def __init__(self):
         self.__size = size
         
     
