@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+Square = __import__('0-square').Square
 """Example Google style docstrings.
 
 This module demonstrates documentation as specified by the `Google Python
@@ -15,4 +17,6 @@ with a section header and a colon followed by a block of indented text.
 
 """
 def __init__(self,size):
-        size = self.__size
+        self.__size = size
+        
+    
