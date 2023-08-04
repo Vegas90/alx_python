@@ -5,7 +5,6 @@ Style Guide`_. Docstrings may extend over multiple lines. Sections are created
 with a section header and a colon followed by a block of indented text.
 
 """
-Square = __import__('0-square').Square
 class Square:
     """
 Example Google style docstrings.
