@@ -6,7 +6,6 @@ with a section header and a colon followed by a block of indented text.
 
 """
 class Square:
-    pass
     """
 Example Google style docstrings.
 
