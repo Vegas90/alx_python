@@ -41,4 +41,5 @@ adds up
                 for column in range(self.__size):
                     print("#", end="")
                 else:
-                    print(end="") 
+                    print("\n") 
+                
