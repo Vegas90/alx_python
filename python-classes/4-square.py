@@ -38,7 +38,7 @@ adds up
            print()
         else:
             for row in range(self.__size):
-                print("\n")
+                print(end="")
                 for column in range(self.__size):
                     print("#", end="")
                     
