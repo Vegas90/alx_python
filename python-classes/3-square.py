@@ -11,13 +11,15 @@ adds up
 """
 
     def __init__(self,size = 0):
+        self.__size = size
+        
         """The @property decorator allows you to access the size attribute like an attribute"""
     @property
     def size(self):
         return self.__size
     
-        """@size.setter decorator allows you to set the size attribute while performing the necessary checks for type and value constraints. 
-        """
+    """@size.setter decorator allows you to set the size attribute while performing the necessary checks for type and value constraints. 
+    """
     @size.setter
     def size(self,value):
         if type(value) is not int:
