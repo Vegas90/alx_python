@@ -9,5 +9,5 @@ class Square:
 adds up
 
 """
-def __init__(self,size = 0):
+def __init__(self,size):
     self.__size = size
