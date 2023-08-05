@@ -1,5 +1,5 @@
 """
-declare class
+module with a class 
 
 """
 
