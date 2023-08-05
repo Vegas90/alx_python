@@ -18,4 +18,4 @@ adds up
            self.__size=size
     
     def area(self):
-        return self.__area ** 2
+        return self.__size ** 2
