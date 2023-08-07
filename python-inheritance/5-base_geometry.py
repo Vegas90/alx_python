@@ -14,8 +14,11 @@ class BaseGeometry:
     
      """
         if value is not int:
+            """class"""
             raise TypeError(f"{name}must be an integer")
         elif value < 0 :
+            """Class"""
             raise ValueError(f"{name} must be greater than 0")
         else:
+            """Class"""
             return value
