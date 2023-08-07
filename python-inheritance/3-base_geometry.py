@@ -1,4 +1,4 @@
 """Class"""
 class BaseGeometry:
     """class"""
-pass
+    pass
