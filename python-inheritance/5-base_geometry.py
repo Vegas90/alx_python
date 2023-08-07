@@ -1,8 +1,15 @@
 """Class"""
-class BaseGeometry:
+class BaseGeometry():
     """class
     
-     """       
+     """
+    def __dir__(self):
+        attributes = super().__dir__()
+        new_attribute_list =[
+            item for item in attributes if item != "__init_subclass__"]
+        return new_attribute_list
+     
+            
     def area(self):
         """class"""
         raise Exception ("area() is not implemented")
