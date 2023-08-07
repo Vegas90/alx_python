@@ -4,18 +4,13 @@ class BaseGeometry:
     
      """       
     def area(self):
-        """class
-    
-     """
+        """class"""
         raise Exception ("area() is not implemented")
-    """class
-    
-     """
-    @area.setter
+    """class"""
+    #@area.setter
+        #"""class"""
     def integer_validator(self, name, value):
-        """class
-    
-     """
+        """class"""
         if value is not int:
             """class"""
             raise TypeError(f"{name}must be an integer")
