@@ -8,4 +8,5 @@ def area(self):
 
 @area.setter
 def area(self,value):
+    self.__value= value
     raise Exception("area() is not implemented")
