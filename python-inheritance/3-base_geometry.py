@@ -2,3 +2,5 @@
 class BaseGeometry:
     """class"""
     pass
+
+bg = BaseGeometry()
