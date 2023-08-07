@@ -1,9 +1,7 @@
 """Class"""
 class BaseGeometry:
-    """class
-def __init__(self, area="Unknown"):
-    self.__area = area
-@property """
+    """class"""
+@property 
 def area(self):
     raise Exception ("area() is not implemented")
 
