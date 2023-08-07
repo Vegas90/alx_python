@@ -42,5 +42,5 @@ class Rectangle(BaseGeometry):
     def print(self):
         print(self.area())
     
-    def str(self):
-        print(f"Rectangle <{self.__width}>/<{self.__height}>")
+    def __str__(self):
+        return "Rectangle <{self.__width}>/<{self.__height}>"
