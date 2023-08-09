@@ -109,5 +109,3 @@ class Rectangle(Base):
         """documented"""
         return(f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
     
-#r1 = Rectangle(2, 3, 8, 2)
-#r1.display()
