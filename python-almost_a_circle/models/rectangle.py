@@ -30,7 +30,7 @@ class Rectangle(Base):
         """setter width"""
         if not isinstance(int(width),int):
             raise TypeError(f"{width} must be an integer")
-        elif width <= 0:
+        elif int(width) <= 0:
             raise ValueError(f"{width} must be > 0")
         
         self.__width= width
