@@ -94,5 +94,5 @@ class Rectangle(Base):
         and
         does so
         """
-        return self.__area
+        return self.__width * self.__height
         
