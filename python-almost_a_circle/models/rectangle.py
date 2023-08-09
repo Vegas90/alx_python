@@ -48,8 +48,8 @@ class Rectangle(Base):
             raise TypeError(f"{height} must be an integer")
         elif height <= 0:
             raise ValueError(f"{height} must be > 0")
-        else:
-            self.__height= height
+        
+        self.__height= height
     
     @property
     def x(self):
@@ -63,8 +63,8 @@ class Rectangle(Base):
             raise TypeError(f"{x} must be an integer")
         elif x < 0:
             raise ValueError(f"{x} must be >= 0")
-        else:
-            self.__x= x
+      
+        self.__x= x
     
     @property
     def y(self):
@@ -78,8 +78,8 @@ class Rectangle(Base):
             raise TypeError(f"{y} must be an integer")
         elif y < 0:
             raise ValueError(f"{y} must be >= 0")
-        else:
-            self.__y= y
+        
+        self.__y= y
     
     def __init__(self, width, height, x=0, y=0, id=None):
         """Call the Base class constructor with id"""
