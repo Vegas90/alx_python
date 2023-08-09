@@ -89,6 +89,6 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         
-def area(self):
-    return self.__area
+    def area(self):
+        return self.__area
         
