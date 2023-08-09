@@ -14,6 +14,7 @@ class Base:
 
 """create rectangle class inheriting from Base"""           
 class Rectangle(Base):
+    """class"""
     __width = 0
     __height= 0
     __x= 0
