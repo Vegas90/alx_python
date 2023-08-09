@@ -32,8 +32,8 @@ class Rectangle(Base):
             raise TypeError(f"{width} must be an integer")
         elif width <= 0:
             raise ValueError(f"{width} must be > 0")
-        else:
-            self.__width= width
+        
+        self.__width= width
     
        
     @property
