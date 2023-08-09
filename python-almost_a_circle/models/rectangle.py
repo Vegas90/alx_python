@@ -28,7 +28,12 @@ class Rectangle(Base):
     @width.setter
     def width(self,width):
         """setter width"""
-        self.__width= width
+        if width is not int:
+            raise TypeError(f"{width} must be an integer")
+        elif width <= 0:
+            raise ValueError(f"{width} must be > 0")
+        else:
+            self.__width= width
     
        
     @property
@@ -39,7 +44,12 @@ class Rectangle(Base):
     @height.setter
     def height(self,height):
         """height setter"""
-        self.__height= height
+        if height is not int:
+            raise TypeError(f"{height} must be an integer")
+        elif height <= 0:
+            raise ValueError(f"{height} must be > 0")
+        else:
+            self.__height= height
     
     @property
     def x(self):
@@ -49,7 +59,12 @@ class Rectangle(Base):
     @x.setter
     def x(self,x):
         """x setter"""
-        self.__x= x
+        if x is not int:
+            raise TypeError(f"{x} must be an integer")
+        elif x < 0:
+            raise ValueError(f"{x} must be > 0")
+        else:
+            self.__x= x
     
     @property
     def y(self):
@@ -59,7 +74,12 @@ class Rectangle(Base):
     @y.setter
     def y(self,y):
         """y setter"""
-        self.__y= y
+        if y is not int:
+            raise TypeError(f"{y} must be an integer")
+        elif y < 0:
+            raise ValueError(f"{y} must be > 0")
+        else:
+            self.__y= y
     
     def __init__(self, width, height, x=0, y=0, id=None):
         """Call the Base class constructor with id"""
