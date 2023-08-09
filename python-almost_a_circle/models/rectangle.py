@@ -99,13 +99,16 @@ class Rectangle(Base):
     
     def display(self):
         """that prints in stdout the Rectangle instance with the character #"""
-        for _ in range(self.__height):
-            print("#" * self.__width)
-            
+           
         for _ in range(self.__y):
-            print("#" * self.__x)
+            print()
             
+        for _ in range(self.__height):
+            print("" * self.__x + "#" * self.__width)
+    
     def __str__(self):
         """documented"""
         return(f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
     
+#r2 = Rectangle(3, 2, 5, 6)
+#r2.display()
