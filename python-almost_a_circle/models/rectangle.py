@@ -28,12 +28,13 @@ class Rectangle(Base):
     @width.setter
     def width(self,width):
         """setter width"""
-        if isinstance(width, (int)) or str(float(width)).isdigit():
-            raise TypeError(f"{width} must be an integer")
+        value =int(width)    
+        if not isinstance(value, int):
+            raise TypeError(f"{value} must be an integer")
         elif int(width) <= 0:
-            raise ValueError(f"{width} must be > 0")
+            raise ValueError(f"{value} must be > 0")
         else:
-            self.__width= width
+            self.__width= value
     
        
     @property
