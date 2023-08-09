@@ -90,5 +90,6 @@ class Rectangle(Base):
         self.y = y
         
     def area(self):
+        """area"""
         return self.__area
         
