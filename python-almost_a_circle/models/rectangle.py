@@ -118,17 +118,17 @@ class Rectangle(Base):
         """
         args_length = len(args)
         kwargs_length = len(kwargs)
-        
+
         for key, value in kwargs.items():
             """kwargs"""
             if key == "id":
                 self.id = value
             elif key == "width":
-                self.width == value
-            elif key == "x":
-                self.x == value
-            elif key == "y":
                 self.width = value
+            elif key == "x":
+                self.x = value
+            elif key == "y":
+                self.y = value
         
         
         if args_length > 0:
