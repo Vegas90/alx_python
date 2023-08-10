@@ -131,7 +131,7 @@ class Rectangle(Base):
                 self.y = value
         
         
-        """if args_length > 0:
+        if args_length > 0:
             self.id = args[0]
         if args_length > 1:
             self.width = args[1]
@@ -140,4 +140,4 @@ class Rectangle(Base):
         if args_length > 3:
             self.x = args[3]
         if args_length > 4:
-            self.y = args[4] """
+            self.y = args[4]  
