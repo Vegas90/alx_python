@@ -1,4 +1,5 @@
-"""from models.rectangle import Rectangle"""
+"""method"""
+from models.rectangle import Rectangle
 
 """class"""
 class Square(Rectangle):
