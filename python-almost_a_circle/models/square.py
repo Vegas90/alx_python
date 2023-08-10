@@ -156,7 +156,7 @@ class Square(Rectangle):
         rectangle"""
         return (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
     
-s1 = Square(5)
+"""s1 = Square(5)
 print(s1)
 print(s1.area())
-s1.display()
+s1.display()"""
