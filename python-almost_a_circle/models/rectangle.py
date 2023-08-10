@@ -114,6 +114,8 @@ class Rectangle(Base):
 #r2.display()
 
 def update(self, *args):
+    """_summary_
+    """
     args_length = len(args)
     
     if args_length > 0:
