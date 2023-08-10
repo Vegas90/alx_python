@@ -113,11 +113,24 @@ class Rectangle(Base):
 #r2 = Rectangle(3, 2, 5, 6)
 #r2.display()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """_summary_
         """
         args_length = len(args)
-    
+        kwargs_length = len(kwargs)
+        
+        for key, value in kwargs.items():
+            """kwargs"""
+            if key == "id":
+                self.id = value
+            elif key == "width":
+                self.width == value
+            elif key == "x":
+                self.x == value
+            elif key == "y":
+                self.width = value
+        
+        
         if args_length > 0:
             self.id = args[0]
         if args_length > 1:
