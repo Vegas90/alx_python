@@ -156,7 +156,15 @@ class Square(Rectangle):
         rectangle"""
         return (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
     
-"""s1 = Square(5)
-print(s1)
-print(s1.area())
-s1.display()"""
+    @property
+    def size(self):
+        return self.width
+    
+    @size.setter
+    def size(self,size):
+        if not isinstance(size,int):
+            raise TypeError("height must be an integer")
+        elif size<= 0:
+            raise ValueError("height must be > 0")
+        
+        self.width = size
