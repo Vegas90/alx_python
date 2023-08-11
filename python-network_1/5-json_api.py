@@ -11,7 +11,7 @@ if len(sys.argv) > 1:
 response = requests.get(url, data=data)
 try:
     colar= response.json()
-    if colar is not None:
+    if colar:
         print('[', colar['id'], '] ', colar['name'])
     else:
         print("No result")
