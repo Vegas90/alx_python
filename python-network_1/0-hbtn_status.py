@@ -23,6 +23,6 @@ if response.status_code == 200:
     print("\t- content:", content)
 else:
     """
-    commit my code
+    commit 
     """
     print(f"Request failed with status code: {response.status_code}")
