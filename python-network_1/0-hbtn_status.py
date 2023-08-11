@@ -11,5 +11,5 @@ response = requests.get(url)
 commented
 """
 print("Body response:")
-print("type:", type(response.text))
-print("content:", response.text)
+print("\t- type:", type(response.text))
+print("\t-content:", response.text)
