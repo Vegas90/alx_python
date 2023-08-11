@@ -1,12 +1,8 @@
-"""_summary_
-"""
+"""_summary_"""
 import requests
-"""_summary_
-"""
 url= "https://alu-intranet.hbtn.io/status"
 
-"""_summary_
-"""
+"""_summary_"""
 response = requests.get(url)
 """"summary"""
 content = response.json()
