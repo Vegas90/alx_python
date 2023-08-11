@@ -1,13 +1,17 @@
-"""_summary_
+"""
+_summary_
 """
 import requests
-"""_summary_
+"""
+_summary_
 """
 url= "https://alu-intranet.hbtn.io/status"
 
 response = requests.get(url)
 if response.status_code == 200:
-    """commit"""
+    """
+    commit
+    """
     content = response.json()
     print("Body response:")
     print("\t- type:", type(content))
