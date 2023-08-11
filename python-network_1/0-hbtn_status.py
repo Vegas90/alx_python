@@ -1,13 +1,17 @@
+"""
+importing
+"""
 import requests
 """
-_summary_ my code
+allocating url
 """
 url= "https://alu-intranet.hbtn.io/status"
 """
-    commit my code
+    getting information of the url
 """
 response = requests.get(url)
-"""commented
+"""
+commented
 """
 if response.status_code == 200:
     """
@@ -18,4 +22,7 @@ if response.status_code == 200:
     print("\t- type:", type(content))
     print("\t- content:", content)
 else:
+    """
+    commit my code
+    """
     print(f"Request failed with status code: {response.status_code}")
