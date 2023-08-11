@@ -10,9 +10,8 @@ else:
 data = {'q': q}
     
 response = requests.get(url, data=data)
-colar= response.json()
 try:
-    
+    colar= response.json()
     if colar is not None:
         print(f"[{colar['id']}] {colar['name']}")
     else:
