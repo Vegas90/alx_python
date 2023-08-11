@@ -1,6 +1,3 @@
-"""
-_summary_ my code
-"""
 import requests
 """
 _summary_ my code
