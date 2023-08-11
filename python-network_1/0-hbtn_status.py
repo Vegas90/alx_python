@@ -1,14 +1,16 @@
-"""_summary_"""
+"""_summary_
+"""
 import requests
+"""_summary_
+"""
 url= "https://alu-intranet.hbtn.io/status"
 
-"""_summary_"""
 response = requests.get(url)
-""""summary"""
-content = response.json()
-""""summary"""
-print("Body response:")
-""""summary"""
-print("\t- type:", type(content))
-""""summary"""
-print("\t- content:", content)
+if response.status_code == 200:
+    """commit"""
+    content = response.json()
+    print("Body response:")
+    print("\t- type:", type(content))
+    print("\t- content:", content)
+else:
+    print(f"Request failed with status code: {response.status_code}")
