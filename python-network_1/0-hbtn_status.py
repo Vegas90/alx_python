@@ -16,8 +16,8 @@ if response.status_code == 200:
     """
     #content = response.json()
     print("Body response:")
-    print("\t- type:", type(content))
-    print("\t- content:", content)
+    print("\t- type:", type(response))
+    print("\t- content:", response)
 else:
     """
     commit 
