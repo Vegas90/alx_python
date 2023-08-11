@@ -1,6 +1,3 @@
-"""
-importing
-"""
 import requests
 """
 allocating url
@@ -17,7 +14,7 @@ if response.status_code == 200:
     """
     commit my code
     """
-    content = response.json()
+    #content = response.json()
     print("Body response:")
     print("\t- type:", type(content))
     print("\t- content:", content)
