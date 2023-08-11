@@ -10,12 +10,14 @@ else:
 data = {'q': q}
     
 response = requests.get(url, data=data)
-colar= response.json()   
-if colar is not None:
-    print(f"[{colar['id']}] {colar['name']}")
-else:
-    print("No result")
+colar= response.json()
+try:
     
-#except ValueError:
-    #print("Not a valid JSON")
+    if colar is not None:
+        print(f"[{colar['id']}] {colar['name']}")
+    else:
+        print("No result")
+    
+except ValueError:
+    print("Not a valid JSON")
 
