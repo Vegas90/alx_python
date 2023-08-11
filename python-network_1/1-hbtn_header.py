@@ -1,15 +1,10 @@
 import requests
 import sys
-"""
-    getting information of the url
-"""
-url=""
-email=""
-"""
-    getting information of the url
-"""
-response = requests.post(url,data=email)
-"""
-    getting information of the url
-"""
-print(response.text)
+"""cont"""
+url="https://intranet.hbtn.io"
+"""cont"""
+response = requests.get(url)
+"""cont"""
+content_type = response.headers.get('X-Request-Id')
+"""cont"""
+print(content_type)
