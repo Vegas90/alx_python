@@ -7,7 +7,7 @@ def list_states(username, password, database):
     cursor= db.cursor()
     
     #Execute the query to list states in ascending order by id
-    query = "SELECT * FROM states ORDER BY states.id ASC"
+    query = "SELECT * FROM hbtn_0e_0_usa.states ORDER BY states.id ASC"
     cursor.execute(query)
         
     #display
