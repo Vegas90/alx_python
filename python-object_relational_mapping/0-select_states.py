@@ -10,7 +10,7 @@ def list_states(username, password, database):
         port=3306,
         user=username,
         passwd=password,
-        db=database,
+        db=database
         )
 # Create a cursor to execute queries
     cursor= db.cursor()
@@ -21,7 +21,7 @@ def list_states(username, password, database):
 
     #print
     for row in results:
-        print(row[0], row[1])
+        print(row)
 #close connection   
     cursor.close()
     db.close()
