@@ -7,7 +7,7 @@ cursor= db.cursor()
 
 #Execute the query 
 query = "SELECT states.name, cities.name FROM cities INNER JOIN states ON cities.state_id = states.id  WHERE states.name= %s ORDER BY cities.id ASC"
-param= (argv[4])
+param= (argv[4],)
 # Put the parameter in a tuple 
 cursor.execute(query, param)
     
