@@ -3,14 +3,14 @@ cut
 """
 import MySQLdb
 #connection
-def list_states(username, password, hbtn_0e_0_usa):
+def list_states(username, password, database):
 # Connect to the MySQL server
     db = MySQLdb.connect( 
         host="localhost",
         port=3306,
         user=username,
         passwd=password,
-        db="hbtn_0e_0_usa",
+        db=database,
         )
 # Create a cursor to execute queries
     cursor= db.cursor()
@@ -21,7 +21,7 @@ def list_states(username, password, hbtn_0e_0_usa):
 
     #print
     for row in results:
-        print(row)
+        print(row[0], row[1])
 #close connection   
     cursor.close()
     db.close()
