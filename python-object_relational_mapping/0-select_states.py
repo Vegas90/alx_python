@@ -10,7 +10,7 @@ def list_states(username, password, hbtn_0e_0_usa):
         port=3306,
         user=username,
         passwd=password,
-        db=hbtn_0e_0_usa,
+        db="hbtn_0e_0_usa",
         )
 # Create a cursor to execute queries
     cursor= db.cursor()
