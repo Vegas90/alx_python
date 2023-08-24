@@ -3,14 +3,14 @@ cut
 """
 import MySQLdb
 #connection
-def list_states(username, password, database):
+def list_states(username, password, hbtn_0e_0_usa):
 # Connect to the MySQL server
     db = MySQLdb.connect( 
         host="localhost",
         port=3306,
         user=username,
         passwd=password,
-        db=database,
+        db=hbtn_0e_0_usa,
         )
 # Create a cursor to execute queries
     cursor= db.cursor()
