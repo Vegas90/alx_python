@@ -6,8 +6,9 @@ db = MySQLdb.connect(host="localhost", port=3306, user=argv[1], passwd=argv[2], 
 cursor= db.cursor()
 
 #Execute the query to list states in ascending order by id
-query = "SELECT * FROM states WHERE states.name={} ORDER BY states.id ASC".format(argv[4])
-cursor.execute(query)
+query = "SELECT * FROM states WHERE states.name=%s ORDER BY states.id ASC"
+name=(argv[4],)
+cursor.execute(query,name)
     
 #display
 results= cursor.fetchall()
