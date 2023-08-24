@@ -1,4 +1,5 @@
 import MySQLdb
+from sys import argv
 #connection
 
 #Connect to the MySQL server
