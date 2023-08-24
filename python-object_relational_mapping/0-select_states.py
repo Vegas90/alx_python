@@ -3,7 +3,7 @@ cut
 """
 import MySQLdb
 #connection
-db = MySQLdb.connect(host="localhost", port=3306, user="root", passwd="root1234", db="hbtn_0e_0_usa")
+db = MySQLdb.connect(host="localhost", port=3306, user="root", passwd="root", db="hbtn_0e_0_usa")
 # Create a cursor to execute queries
 cursor= db.cursor()
 #select all fields in states
