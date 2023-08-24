@@ -6,8 +6,7 @@ db = MySQLdb.connect(host="localhost", port=3306, user=argv[1], passwd=argv[2], 
 cursor= db.cursor()
 
 #Execute the query to list states in ascending order by id
-#BINARY ensures the comparison is case
-query = "SELECT * FROM states WHERE BINARY states.name LIKE 'N%' ORDER BY states.id ASC"
+query = "SELECT * FROM states WHERE states.name=argv[4] ORDER BY states.id ASC"
 cursor.execute(query)
     
 #display
