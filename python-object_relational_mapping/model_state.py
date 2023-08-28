@@ -1,9 +1,5 @@
-#study
 from sqlalchemy import create_engine, Column, Integer, String
-#study
-
 from sqlalchemy.ext.declarative import declarative_base
-#study
 import sys
 
 # Create a database connection using command line arguments
@@ -28,7 +24,6 @@ class State(Base):
         name (str): The name of the state.
     """
     __tablename__ = 'states'
-    
     # Define attributes for the 'states' table
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(128), nullable=False)
