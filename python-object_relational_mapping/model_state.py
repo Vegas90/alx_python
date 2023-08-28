@@ -15,7 +15,7 @@ Base = declarative_base()
     Attributes:
         id (int): The primary key identifier for the state.
         name (str): The name of the state.
-    """
+"""
 class State(Base):
     """
     Represents a state in the 'states' table.
