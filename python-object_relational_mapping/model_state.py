@@ -1,4 +1,3 @@
-# Import necessary modules
 from sqlalchemy import create_engine, Column, Integer, String, argv
 from sqlalchemy.ext.declarative import declarative_base
 # Create a database connection using command line arguments
