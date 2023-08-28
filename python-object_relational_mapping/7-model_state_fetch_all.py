@@ -17,7 +17,7 @@ session = Session()
 states = session.query(State).order_by(State.id)
 # Print the results
 for state in states:
-    print(f"{state.id}:{state.name}")
+    print(f"{state.id}: {state.name}")
 # Close the session
 session.close()
 
