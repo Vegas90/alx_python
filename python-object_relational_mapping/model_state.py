@@ -1,5 +1,4 @@
 # Create a database connection
-
 from sqlalchemy import create_engine, Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -12,11 +11,9 @@ Base = declarative_base()
 #defined mapped class
 class State(Base):
     __tablename__= 'states'
-    
+    #defined mapped class
     id= Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(128),nullable=False)
      
 # Import other mapped classes before create_all
-# class OtherClass(Base):
-# Create tables
 Base.metadata.create_all(engine)
