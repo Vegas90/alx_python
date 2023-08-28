@@ -1,3 +1,4 @@
+#study
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 import sys
@@ -25,4 +26,5 @@ class State(Base):
     name = Column(String(128), nullable=False)
 
 # Create the tables in the database
-Base
+Base.metadata.create_all(engine)
+
