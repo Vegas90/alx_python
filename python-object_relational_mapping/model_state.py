@@ -9,6 +9,13 @@ engine = create_engine(f'mysql://{sys.argv[1]}:{sys.argv[2]}@localhost:3306/{sys
 # Create a base class for declarative models
 Base = declarative_base()
 
+"""
+    Represents a state in the 'states' table.
+    
+    Attributes:
+        id (int): The primary key identifier for the state.
+        name (str): The name of the state.
+    """
 class State(Base):
     """
     Represents a state in the 'states' table.
