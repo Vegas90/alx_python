@@ -11,7 +11,13 @@ Base = declarative_base()
 #define class
 #mre class
 class State(Base):
-    # Specify the name of the table in the database
+   """
+    Represents a state in the 'states' table.
+    
+    Attributes:
+        id (int): The primary key identifier for the state.
+        name (str): The name of the state.
+    """
     __tablename__ = 'states'
     
     # Define attributes for the 'states' table
