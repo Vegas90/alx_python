@@ -5,6 +5,7 @@ contains state class and ......
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
+import sys
 
 # Create a database connection using command line arguments
 engine = create_engine(f'mysql://{sys.argv[1]}:{sys.argv[2]}@localhost:3306/{sys.argv[3]}')
