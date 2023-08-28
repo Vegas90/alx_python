@@ -1,6 +1,7 @@
-#!/usr/bin/pythong
-'''
-contains state class and ......'''
+#!/usr/bin/python
+""" 
+contains state class and ......
+"""
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 import sys
@@ -19,7 +20,7 @@ class State(Base):
         id (int): The primary key identifier for the state.
         name (str): The name of the state.
     """
-    __tablename__ = 'states'
+    __tablename__ = "states"
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(128), nullable=False)
 
