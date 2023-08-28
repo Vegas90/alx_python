@@ -1,3 +1,5 @@
+# Create a database connection
+
 from sqlalchemy import create_engine, Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
