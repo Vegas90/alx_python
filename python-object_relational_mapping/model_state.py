@@ -1,4 +1,6 @@
+# Specify the name of the table in the database
 from sqlalchemy import create_engine, Column, Integer, String, argv
+# Specify the name of the table in the database
 from sqlalchemy.ext.declarative import declarative_base
 # Create a database connection using command line arguments
 engine = create_engine(f'mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}')
