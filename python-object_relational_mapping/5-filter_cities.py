@@ -15,7 +15,8 @@ cursor.execute(query, param)
 results= cursor.fetchall()
 
 #print
-print(results)
+for row in results:
+    print(", ".join(str(item) for item in row))
 
 #close connection   
 cursor.close()
