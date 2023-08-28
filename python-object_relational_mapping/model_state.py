@@ -1,6 +1,9 @@
 #study
 from sqlalchemy import create_engine, Column, Integer, String
+#study
+
 from sqlalchemy.ext.declarative import declarative_base
+#study
 import sys
 
 # Create a database connection using command line arguments
