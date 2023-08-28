@@ -24,8 +24,6 @@ class State(Base):
         id (int): The primary key identifier for the state.
         name (str): The name of the state.
     """
-    
-    # Specify the name of the table in the database
     __tablename__ = 'states'
     
     # Define attributes for the 'states' table
