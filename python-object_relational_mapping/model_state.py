@@ -3,10 +3,6 @@ from sqlalchemy import create_engine, Column, Integer, String, argv
 from sqlalchemy.ext.declarative import declarative_base
 
 # Create a database connection using command line arguments
-# The arguments are expected to be provided when the script is run
-# Example usage: python script.py username password database_name
-# argv[1] corresponds to username, argv[2] corresponds to password, argv[3] corresponds to database_name
-# Replace 'script.py' with the actual name of your script file
 engine = create_engine(f'mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}')
 
 # Create a base class for declarative models
