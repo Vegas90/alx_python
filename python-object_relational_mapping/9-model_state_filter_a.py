@@ -14,11 +14,12 @@ Session = sessionmaker(bind=engine)
 # Create a Session
 session = Session()
 # Query the State table and order the results by id in ascending order
-states = session.query(State).order_by(State.id)
+states = session.query(State).order_by(State.id).first()
 
 # Display the result
 if 'a' in states.name:
-    print(f"{states.id}: {states.name}")
+    for state in states:
+        print(f"{states.id}: {states.name}")
 else:
     print("Nothing")
         
