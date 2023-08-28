@@ -7,6 +7,7 @@ engine = create_engine('mysql://argv[1]:argv[2]@localhost:3306/argv[3]')
 Base = declarative_base()
 #defined mapped class
 class State(Base):
+    #defined mapped class
     __tablename__= 'states'
     #defined mapped class
     id= Column(Integer, primary_key=True, autoincrement=True)
