@@ -8,6 +8,7 @@ engine = create_engine(f'mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}')
 Base = declarative_base()
 
 # Define a mapped class named 'State'
+#python3 -c 'print(__import__("my_module").MyClass.__doc__)
 class State(Base):
     # Specify the name of the table in the database
     __tablename__ = 'states'
