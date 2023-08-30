@@ -29,7 +29,7 @@ def c(text):
    """
    return f"C {escape(text.replace('_', ' '))}"
 
-@app.route("/python/<text>", defaults={'text':'is cool'}, strict_slashes=False)
+@app.route("/python/<text>", defaults={"text":"is cool"}, strict_slashes=False)
 def textpy(text):
    """
    This function returns the specified string when the text in that directory
