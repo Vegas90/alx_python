@@ -47,11 +47,15 @@ def num(n):
    return f"{n} is a number"
 
 
-#/number/<n>: display “n is a number” only if n is an integer
+#/number_template/<n>: display a HTML page only if n is an integer:
+#H1 tag: “Number: n” inside the tag BODY
 @app.route("/number_template/<int:n>", strict_slashes=False)
 def num(n):
-   n=n
-   return render_template("5-number.html", n=n)
+    """
+   /number_template/<n>: display a HTML page only if n is an integer:
+   """
+    n=n
+    return render_template("5-number.html", n=n)
 
 
 #You must use the option strict_slashes=False in your route definition
