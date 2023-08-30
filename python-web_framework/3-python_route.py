@@ -34,8 +34,8 @@ def textpy(text):
    """
    This function returns the specified string when the text in that directory
    """
-   return f"Python {escape(text.replace('_', ' '))}"
-
+   #return f"Python {escape(text.replace('_', ' '))}"
+   return f"Python{text}"
 #You must use the option strict_slashes=False in your route definition
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
