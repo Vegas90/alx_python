@@ -29,14 +29,14 @@ def c(text):
    """
    return f"C {escape(text.replace('_', ' '))}"
 
+#The purpose of having two decorators is to handle both scenarios: when a value is provided for the variable and when it's not provided. This technique allows you to have flexible routing behavior based on whether a parameter is present in the URL or not.
 @app.route("/python/<text>")
 @app.route("/python/", defaults={"text":"is cool"}, strict_slashes=False)
 def textpy(text):
    """
    This function returns the specified string when the text in that directory
    """
-   #return f"Python {escape(text.replace('_', ' '))}"
-   return f"Python {text}"
+   return f"Python {escape(text.replace('_', ' '))}"
 
 
 #You must use the option strict_slashes=False in your route definition
