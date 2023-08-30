@@ -18,6 +18,7 @@ def hello():
 def hellow():
    """
    This function returns the specified string when the text in that directory
+   strict_slashes=False ensures that routes can match URLs with or without a trailing slash. 
    """
    return "HBNB"
 
@@ -29,7 +30,7 @@ def c(text):
    return f"C {escape(text.replace('_', ' '))}"
 
 @app.route("/python/<text>", defaults={'text':'is cool'}, strict_slashes=False)
-def textpyt(text):
+def textpy(text):
    """
    This function returns the specified string when the text in that directory
    """
