@@ -26,7 +26,14 @@ def c(text):
    """
    This function returns the specified string when the text in that directory
    """
-   return "C escape(text.replace('_', ' ')) "
+   return f"C {escape(text.replace('_', ' '))}"
+
+@app.route("/python/<text>", defaults={'text':'is cool'}, strict_slashes=False)
+def textpyt(text):
+   """
+   This function returns the specified string when the text in that directory
+   """
+   return f"Python {escape(text.replace('_', ' '))}"
 
 #You must use the option strict_slashes=False in your route definition
 if __name__ == '__main__':
