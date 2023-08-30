@@ -1,14 +1,19 @@
 #!/usr/bin/python
+"""
+A script that starts a flas web application:
+Listening on 0.0.0.0 posrt 5000
+Routes: /display "Hello HBNB!"
+"""
 from flask import Flask
-#!/usr/bin/python
 app = Flask(__name__)
 
-#create instance of this class
 @app.route("/",strict_slashes=False)
-#returns messages we want to display
 def hello():
-    #returns
-    return "Hello HBNB!"
+   """
+   This function returns the specified string when the text in that directory
+   """
+   return "Hello HBNB!"
+
 #You must use the option strict_slashes=False in your route definition
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
