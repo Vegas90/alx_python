@@ -1,43 +1,65 @@
-import requests
 import json
+import requests
+import sys
 
-def get_all_employee_info():
-    all_employee_data = {}
+def get_employee_todo_list(employee_id):
+    """
+    Fetches the todo list for a given employee from a mock API.
 
-    # Retrieve all employee details
-    employee_url = "https://jsonplaceholder.typicode.com/users"
-    employee_response = requests.get(employee_url)
-    if employee_response.status_code != 200:
-        print("Error: Could not fetch employee details.")
-        return
+    Args:
+        employee_id (int): The ID of the employee.
 
+    Returns:
+        tuple: A tuple containing employee name and todo list data.
+    """
+    # Fetch employee details
+    employee_response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
     employee_data = employee_response.json()
-    
-    for employee in employee_data:
-        user_id = employee['id']
-        username = employee['username']
+    employee_name = employee_data.get('name', 'Unknown')
 
-        # Retrieve employee's TODO list
-        todo_url = f"https://jsonplaceholder.typicode.com/users/{user_id}/todos"
-        todo_response = requests.get(todo_url)
-        if todo_response.status_code != 200:
-            print(f"Error: Could not fetch TODO list for user {username}")
-        else:
-            todo_data = todo_response.json()
-            
-            user_tasks = []
-            for task in todo_data:
-                task_completed_status = "Completed" if task['completed'] else "Incomplete"
-                task_title = task['title']
-                user_tasks.append({"username": username, "task": task_title, "completed": task_completed_status})
-            
-            all_employee_data[user_id] = user_tasks
+    # Fetch todo list for the employee
+    todo_response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos")
+    todo_data = todo_response.json()
 
-    # Export to JSON file
-    with open("todo_all_employees.json", 'w') as json_file:
-        json.dump(all_employee_data, json_file, indent=2)
+    return employee_name, todo_data
 
-    print("Data for all employees has been exported to todo_all_employees.json.")
+def export_to_json(filename, data):
+    """
+    Exports data to a JSON file.
+
+    Args:
+        filename (str): The name of the output JSON file.
+        data (dict): The data to be exported.
+
+    Returns:
+        None
+    """
+    with open(filename, 'w') as file:
+        json.dump(data, file, indent=4)
 
 if __name__ == "__main__":
-    get_all_employee_info()
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <employee_id>")
+        sys.exit(1)
+
+    employee_id = int(sys.argv[1])
+    employee_name, todo_list = get_employee_todo_list(employee_id)
+
+    todo_dict = {}
+    for task in todo_list:
+        user_id = str(employee_id)
+        task_data = {
+            "username": employee_name,
+            "task": task["title"],
+            "completed": task["completed"]
+        }
+
+        if user_id not in todo_dict:
+            todo_dict[user_id] = []
+
+        todo_dict[user_id].append(task_data)
+
+    # Export to JSON
+    filename = "todo_all_employees.json"
+    export_to_json(filename, todo_dict)
+    print(f"Data exported to {filename}")

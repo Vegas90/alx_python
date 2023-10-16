@@ -1,22 +1,44 @@
-#!/usr/bin/python
+"""
+This script retrieves employee TODO list progress and exports it to a JSON file.
+
+Usage: python3 2-export_to_JSON.py <employee_id>
+
+Arguments:
+    employee_id (int): The employee ID to retrieve TODO list progress for.
+
+Example:
+    python3 2-export_to_JSON.py 2
+"""
+
 import json
+from sys import argv
 import requests
-import sys
-# Get the employee ID from the command line
-employee_id = int(sys.argv[1])
-# Get the employee's TODO list
-response = requests.get("https://jsonplaceholder.typicode.com/users/{}/todos".format(employee_id))
-todos = response.json()
-# Get the employee's name
-response = requests.get("https://jsonplaceholder.typicode.com/users/{}".format(employee_id))
-employee = response.json()
-employee_name = employee["name"]
-# Create a dictionary to store the data
-data = {}
-data[employee_id] = []
-# Add the tasks to the dictionary
-for todo in todos:
-    data[employee_id].append({"task": todo["title"], "completed": todo["completed"], "username": employee_name})
-# Write the data to a JSON file
-with open("{}.json".format(employee_id), "w") as jsonfile:
-    json.dump(data, jsonfile)
+
+if __name__ == "__main__":
+    if len(argv) < 2:
+        print("Usage: python3 2-export_to_JSON.py <employee_id>")
+        exit(1)
+
+    employee_id = argv[1]
+
+    # Fetch employee details
+    employee_response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
+    employee_data = employee_response.json()
+    employee_name = employee_data.get('name')
+
+    # Fetch employee TODO list
+    todos_response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos")
+    todos_data = todos_response.json()
+
+    # Filter tasks owned by this employee
+    employee_tasks = [{"task": task['title'], "completed": task['completed'], "username": employee_name} for task in todos_data]
+
+    # Create a dictionary for JSON export
+    export_data = {employee_id: employee_tasks}
+
+    # Export to JSON file
+    with open(f"{employee_id}.json", 'w') as json_file:
+        json.dump(export_data, json_file)
+
+    # Print correct user ID and its length
+    print(f"Correct USER_ID: {employee_id}, Length: {len(employee_id)}")
